@@ -1,6 +1,4 @@
-import itertools
 from math import floor
-import re
 
 def read_input():
     ordering = {}
