@@ -28,22 +28,18 @@ def solve_2():
 
 def check_equation(result, numbers, concat):
     queue = [(numbers[0], 0)]
-    results = []
     while len(queue) > 0:
         curr = queue.pop()
         if curr[1] == len(numbers) - 1:
-            results.append(curr[0])
-            continue;
+            if curr[0] == result:
+                return True
+            else:
+                continue
 
         queue.append((curr[0] * numbers[curr[1]+1], curr[1] + 1))
         queue.append((curr[0] + numbers[curr[1]+1], curr[1] + 1))
         if concat:
            queue.append((int(str(curr[0]) + str(numbers[curr[1]+1])), curr[1] + 1)) 
-    
-    if result in results:
-        return True
-    else:
-        return False
 
 solve_1()
 solve_2()
