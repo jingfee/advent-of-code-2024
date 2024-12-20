@@ -96,5 +96,5 @@ def dijkstra(byte_map, start, end):
 
     return distances[end]
 
-#solve_1()
+solve_1()
 solve_2()
