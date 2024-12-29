@@ -55,5 +55,5 @@ def bron_kerbosch(R, P, X, graph, results):
         X.add(node)
 
 
-#solve_1()
+solve_1()
 solve_2()
